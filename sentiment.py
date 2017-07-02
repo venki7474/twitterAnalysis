@@ -13,10 +13,10 @@ class TwitterClient(object):
         Class constructor or initialization method.
         '''
         # keys and tokens from the Twitter Dev Console
-        consumer_key = 'qIBEepc99VH4nQRcygIS0Re2D'
-        consumer_secret = 'H3EPxjbPaaANWHVTskgNxyD6mfahwexnVax00mFB7nKNtKEIQy'
-        access_token = '760504804124790784-8PbrYaI96Xj53iUUnOSAfuT3EKS7PE1'
-        access_token_secret = 'KLFCyEDfcfV2jvDSrILvbZYt9WXt4E1tnzSXmJvlNGuZb'
+        consumer_key = 'xxxxxxxxxxqIBEepc99VH4nQRcygIS0Re2Dxxxxxxxx'
+        consumer_secret = 'xxxxxxxxxxxxxxH3EPxjbPaaANWHVTskgNxyD6mfahwexnVax00mFB7nKNtKEIQyxxxxxxxxxxxx'
+        access_token = 'xxxxxxxxxxxxxx760504804124790784-8PbrYaI96Xj53iUUnOSAfuT3EKS7PE1xxxxxxxxxxx'
+        access_token_secret = 'xxxxxxxxxxxKLFCyEDfcfV2jvDSrILvbZYt9WXt4E1tnzSXmJvlNGuZbxxxxxxxxxxxxxxx'
 
         # attempt authentication
         try:
@@ -104,14 +104,14 @@ def main():
     # percentage of neutral tweets
     print("Neutral tweets percentage: {} %".format(100*(len(tweets) - len(ntweets) - len(ptweets))/len(tweets)))
 
-    # printing first 5 positive tweets
+    # printing positive tweets
     print("\n\nPositive tweets:")
-    for tweet in ptweets[:10]:
+    for tweet in ptweets:
         print(tweet['text'])
 
-    # printing first 5 negative tweets
+    # printing negative tweets
     print("\n\nNegative tweets:")
-    for tweet in ntweets[:10]:
+    for tweet in ntweets:
         print(tweet['text'])
 
 if __name__ == "__main__":
